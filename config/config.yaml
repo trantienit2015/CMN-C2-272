@@ -1,0 +1,11 @@
+# Runtime parameters — loaded separately from config/agent.yaml (the static
+# discovery manifest) and passed to the graph as Graph(config=...).
+max_retry: 3
+timeout_seconds: 30
+
+# チェックポインタを要する設定。マニフェストではなくこちらが正しい置き場で、
+# ここに置いて初めてグラフに届く（＝invoke をまたいで状態が永続化する）。
+memory_enabled: true
+hitl:
+  enabled: true
+  max_hitl: 8
